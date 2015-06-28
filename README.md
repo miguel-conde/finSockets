@@ -46,19 +46,21 @@ result  <- fins.buy(lendserv,
 					payment = payserv)
 ```
 
-And if everything goes right, one field in result will contain a new product of class bond.private, location 'BTCjam', service 'BTCjam', ID <some code> with properties including nominal_amount, nominal_unit, expiration, purchase_date and more.
+And if everything goes right, one field in result will contain a new product of class bond.private, location 'BTCjam', service 'BTCjam', ID ^some_code^ with properties including nominal_amount, nominal_unit, expiration, purchase_date and more.
 Also when I check my assets at 'Coinbase' I will have 0.5 BTC less and when I check my assets at 'BTCjam' I will be the proud owner of that private bond. 
-Also, the package will be updated like a normal R package (hopefully in Cran someday) but the information about products and services is kept in its own repository. The later is partially data, like: the list of all existing services, global products, the relation between them, what is supported by each service or where to find the documentation, etc. and partially code: R functions understanding APIs to buy/sell products, etc.
+Also, the package will be updated like a normal R package (hopefully in Cran someday) but the information about products and services is kept in its own repositories. The later is partially data, like: the list of all existing services, global products, the relation between them, what is supported by each service or where to find the documentation, etc. and partially code: R functions understanding APIs to buy/sell products, etc.
 So the complete system will be:
 - The package itself: finSockets
 - Data about products, services and APIs stored in [Google Public Data](https://developers.google.com/public-data/)
 - Driver functions operating the APIs stored in GitHub. For security reasons, these functions will be under public revision and restricted write access.
-- User credentials. Are local to each user. The package will support encrypting them with a keychain password that should never be stored in the same computer and treat them as sensitive material with an as-short-as-possible lifetime and never stored.
+- User credentials. Are local to each user. The package will support encrypting them with a keychain password that should never be stored in the same computer and treat them as sensitive material with an as-short-as-possible lifetime and never stored as plaintext.
 
-As you may have noticed, this a very ambitious goal. A task that requires collaboration. So this is an opportunity to share everything I know about financial services with other people who know even more and put everything together for the following rewards:
+As you may have noticed, this a very ambitious goal. A task that requires collaboration! So this is an opportunity to share everything I know about financial services with other people who know even more and put everything together for the following rewards:
+
 1. The package itself. Allowing to invest and create fintech business
 2. The package itself. Allowing others to correctly and efficiently use our fintech business
 3. Donations and license sales distributed in full among contributors on a pure meritocratic basis
+
 ## Product classes initially included
 In the first version of this package we intend to focus on products that represent value and can be traded over the internet. We do not contemplate purely transactional systems like payment platforms or remittance in this first version, but do contemplate to include them in the future. This means, you can buy or sell products on a platform using funds you have on that same platform or using bitcoin. The package includes all necessary to sign and verify bitcoin payments and provide or withdraw funds in bitcoin in services supporting that functionality, including BTC to fiat conversion.
 The products fall in one of these categories:
