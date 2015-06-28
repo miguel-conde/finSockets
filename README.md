@@ -4,28 +4,29 @@ R package for querying and trading all kinds of financial products over the APIS
 ## Introduction
 The idea behind this initiative is sharing the know-how to operate financial APIs in a machine understandable way. Places like [programmableweb]( http://www.programmableweb.com/category/financial/apis?category=19968
 ) do a great job collecting information intended for programmers, but this tool is intended for analysts and investors. The intention is creating an abstraction of all services and products.
-If the following is valid code:
+The following is valid code:
 
-| Example 1 |
-```
+#### Example 1
+```R
 usd <- fins.product(currency.fiat, 'USD')
 btc <- fins.product(currency.digital, 'BTC')
 myservice <- fins.service('CoinDesk')
 cat('The current bitcoin price is:', fins.currentprice(myservice, btc, unit = usd), 'USD')
 ```
 
-Then, changing just 'CoinDesk' for 'Google' should also work, completely isolating the programmer from the API details.
-Furthermore, if I have 50 financial services (banks, fintechs, exchanges or just search engines) and want to check if any of them is offline, this should work.
+Of course, changing 'CoinDesk' for 'Google' also works, completely isolating the programmer from the API details.
 
-| Example 2 |
-```
+Furthermore, if I have 50 financial services (banks, fintechs, exchanges or just search engines) and want to check if any of them is offline, this works.
+
+#### Example 2
+```R
 if (any(!fins.isonline(myservices))) warning('Some services are offline')
 ```
 
-And not just that, the abstraction should also be valid to operate the services as in:
+And not just that, the abstraction is also valid to operate the services as in:
 
-| Example 3 |
-```
+#### Example 3
+```R
 mymoney  <- fins.service('Coinbase')
 me_cb <- fins.credentials(mymoney, 'Santiago')
 lendingservice <- fins.service('BTCjam')
