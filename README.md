@@ -1,38 +1,38 @@
-# finSockets
-R package for querying and trading all kinds of financial products over the APIS of webservices using a shared repository of API interfaces
-
 ## Introduction
 The idea behind this initiative is sharing the know-how to operate financial APIs in a machine understandable way. Places like [programmableweb]( http://www.programmableweb.com/category/financial/apis?category=19968
 ) do a great job collecting information intended for programmers, but this tool is intended for analysts and investors. The intention is creating an abstraction of all services and products.
 If the following is valid code:
 
 | Example 1 |
-| ----------- |
-| usd <- fins.product(currency.fiat, 'USD') |
-| btc <- fins.product(currency.digital, 'BTC') |
-| myservice <- fins.service('CoinDesk') |
-| cat('The current bitcoin price is:', fins.currentprice(myservice, btc, unit = usd), 'USD') |
+```
+usd <- fins.product(currency.fiat, 'USD')
+btc <- fins.product(currency.digital, 'BTC')
+myservice <- fins.service('CoinDesk')
+cat('The current bitcoin price is:', fins.currentprice(myservice, btc, unit = usd), 'USD')
+```
 
 Then, changing just 'CoinDesk' for 'Google' should also work, completely isolating the programmer from the API details.
 Furthermore, if I have 50 financial services (banks, fintechs, exchanges or just search engines) and want to check if any of them is offline, this should work.
 
 | Example 2 |
-| ----------- |
-| if (any(!fins.isonline(myservices))) warning('Some services are offline') |
+```
+if (any(!fins.isonline(myservices))) warning('Some services are offline')
+```
 
 And not just that, the abstraction should also be valid to operate the services as in:
 
 | Example 3 |
-| ----------- |
-| mymoney  <- fins.service('Coinbase') |
-| me_cb <- fins.credentials(mymoney, 'Santiago') |
-| lendingservice <- fins.service('BTCjam') |
-| me_bj <- fins.credentials(lendingservice, 'Santiago') |
-| # By some means I find a product I want to buy. x, y, z represents whatever I need to make that choice and bargain is a list including the fields product, amount = 0.5 and unit = BTC. |
-| bargain <- MyDigitalP2pRiskEvaluationFunction(lendingservice, x, y, z) |
-| # I can buy the product writing: |
-| payserv <- fins.payment(mymoney, me_cb, amount = bargain$amount, unit = bargain$unit) |
-| result <- fins.buy(lendingservice, bargain$product, bargain$amount, unit = bargain$unit, credential = me_bj, payment = payserv) |
+```
+mymoney  <- fins.service('Coinbase')
+me_cb <- fins.credentials(mymoney, 'Santiago')
+lendingservice <- fins.service('BTCjam')
+me_bj <- fins.credentials(lendingservice, 'Santiago')
+# By some means I find a product I want to buy. x, y, z represents whatever I need to make that choice and bargain is a list including the fields product, amount = 0.5 and unit = BTC.
+bargain <- MyDigitalP2pRiskEvaluationFunction(lendingservice, x, y, z)
+# I can buy the product writing:
+payserv <- fins.payment(mymoney, me_cb, amount = bargain$amount, unit = bargain$unit)
+result <- fins.buy(lendingservice, bargain$product, bargain$amount, unit = bargain$unit, credential = me_bj, payment = payserv)
+```
 
 And if everything goes right, one field in result will contain a new product of class bond.private, location 'BTCjam', service 'BTCjam', ID <some code> with properties including nominal_amount, nominal_unit, expiration, purchase_date and more.
 Also when I check my assets at 'Coinbase' I will have 0.5 BTC less and when I check my assets at 'BTCjam' I will be the proud owner of that private bond. 
