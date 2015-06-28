@@ -95,11 +95,11 @@ but it has to implement enough functionality to win its own case in terms of use
 We expect to have this 0.1 version by the end of September 2015. In the meantime, before the version reaches 0.1, we will commit to this repo and update service data to Google (download the package to see where), but the package 
 should not be considered complete work.
 
-When version 0.1 is released, we will submit it to Cran and R-forge and try to promote the package in related internet sites that find it worth mentioning.
+When version 0.1 is released, we will submit it to Cran and R-forge, try to promote it in related internet sites and contact the owners of services.
 
 ## Other languages
 
-Especially Python are welcome. We develop everything using the widest possible conventions to make the repositories of services and products language independent. We will have snippets connecting to the services for other languages (at least Python), but need extra help to elevate that into viable packages.
+Especially Python, are welcome. We develop everything using the widest possible conventions to make the repositories of services and products language independent. We will have snippets connecting to the services for other languages (at least Python), but need extra help to elevate that into viable packages.
 
 ## License and decisions
 
