@@ -37,7 +37,7 @@ me_cb    <- fins.credentials(mymoney, 'Santiago')
 lendserv <- fins.service('BTCjam')
 me_bj    <- fins.credentials(lendserv, 'Santiago')
 
-# By some means I find a product I want to buy. x, y, z represents whatever I need to make that choice 
+# By some means I find a product I want to buy. x, y, z represent whatever I need to make that choice 
 # and bargain is a list including the fields product = some_ID, amount = 0.5 and unit = BTC.
 
 bargain <- MyDigitalP2pRiskEvaluationFunction(lendserv, x, y, z)
