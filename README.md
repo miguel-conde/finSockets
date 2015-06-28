@@ -12,8 +12,10 @@ The following is valid code:
 ```R
 usd <- fins.product(currency.fiat, 'USD')
 btc <- fins.product(currency.digital, 'BTC')
+
 myservice <- fins.service('CoinDesk')
-cat('The current bitcoin price is:', fins.currentprice(myservice, btc, unit = usd), 'USD')
+
+cat('The current bitcoin price is', fins.currentprice(myservice, btc, unit = usd), 'usd.')
 ```
 
 Of course, changing 'CoinDesk' for 'Google' also works, completely isolating the programmer from the API details.
