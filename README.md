@@ -51,10 +51,14 @@ result  <- fins.buy(lendserv,
 					payment = payserv)
 ```
 
-And if everything goes right, one field in result will contain a new product of class bond.private, location 'BTCjam', service 'BTCjam', ID ^some_code^ with properties including nominal_amount, nominal_unit, expiration, purchase_date and more.
+And, if everything goes right, result will contain status = fins.OK and product of class bond.private, location 'BTCjam', service 'BTCjam', ID ^some_code^ with properties including nominal_amount, nominal_unit, expiration, purchase_date and more.
+
 Also when I check my assets at 'Coinbase' I will have 0.5 BTC less and when I check my assets at 'BTCjam' I will be the proud owner of that private bond. 
+
 Also, the package will be updated like a normal R package (hopefully in Cran someday) but the information about products and services is kept in its own repositories. The later is partially data, like: the list of all existing services, global products, the relation between them, what is supported by each service or where to find the documentation, etc. and partially code: R functions understanding APIs to buy/sell products, etc.
+
 So the complete system will be:
+
 - The package itself: finSockets
 - Data about products, services and APIs stored in [Google Public Data](https://developers.google.com/public-data/)
 - Driver functions operating the APIs stored in GitHub. For security reasons, these functions will be under public scrutiny and restricted write access.
