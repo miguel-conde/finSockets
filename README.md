@@ -1,3 +1,6 @@
+# finSockets
+R package for querying and trading all kinds of financial products over the APIS of webservices using a shared repository of API interfaces
+
 ## Introduction
 The idea behind this initiative is sharing the know-how to operate financial APIs in a machine understandable way. Places like [programmableweb]( http://www.programmableweb.com/category/financial/apis?category=19968
 ) do a great job collecting information intended for programmers, but this tool is intended for analysts and investors. The intention is creating an abstraction of all services and products.
