@@ -1,6 +1,6 @@
 # finSockets
 
-R package for querying and trading all kinds of financial products over the APIS of webservices using a shared repository of API interfaces
+R package for querying and trading all kinds of financial products over the APIs of webservices using a shared repository of API interfaces
 
 ## Introduction
 
