@@ -28,7 +28,7 @@ Furthermore, if I have 50 financial services (banks, fintechs, exchanges or just
 if (any(!fins.isonline(myservices))) warning('Some services are offline')
 ```
 
-And not just that, the abstraction is also valid to operate the services as in:
+And not just that, the abstraction is also valid to trade in services as in:
 
 #### Example 3
 ```R
