@@ -33,14 +33,14 @@ lendserv <- fins.service('BTCjam')
 me_bj    <- fins.credentials(lendserv, 'Santiago')
 
 # By some means I find a product I want to buy. x, y, z represents whatever I need to make that choice 
-# and bargain is a list including the fields product ) some ID, amount = 0.5 and unit = BTC.
+# and bargain is a list including the fields product = some_ID, amount = 0.5 and unit = BTC.
 
 bargain <- MyDigitalP2pRiskEvaluationFunction(lendserv, x, y, z)
 
 # I can buy the product writing:
 
 payserv <- fins.payment(mymoney, me_cb, amount = bargain$amount, unit = bargain$unit)
-result  <- fins.buy(lendserv, 
+result  <- fins.buy(lendserv,
                     bargain$product, bargain$amount, unit = bargain$unit, 
 					credential = me_bj, 
 					payment = payserv)
