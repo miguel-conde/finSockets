@@ -72,8 +72,10 @@ As you may have noticed, this a very ambitious goal. A task that requires collab
 
 ## Product classes initially included
 
-In the first version of this package we intend to focus on products that represent value and can be traded over the internet. We do not contemplate purely transactional systems like payment platforms or remittance in this first version, but do contemplate to include them in the future. This means, you can buy or sell products on a platform using funds you have on that same platform or using bitcoin. The package includes all necessary to sign and verify bitcoin payments and provide or withdraw funds in bitcoin in services supporting that functionality, including BTC to fiat conversion.
+In the first version of this package we intend to focus on products that represent value and can be traded over the internet. We do not contemplate purely transactional systems like payment platforms or remittance in this first version, but do contemplate to include them in the future. This means, you can buy or sell products on a platform using funds you have on that same platform or using bitcoin. The package includes all necessary to sign and verify bitcoin payments, provide or withdraw funds in bitcoin and convert between bitcoin and other fiat or digital currencies.
+
 The products fall in one of these categories:
+
 - stock (equities and securities)
 - bond (government, corporate or private)
 - commodity (soft and hard)
