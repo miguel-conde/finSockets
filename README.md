@@ -80,7 +80,7 @@ The products fall in one of these categories:
 - bond (government, corporate or private)
 - commodity (soft and hard)
 - derivatives (forward contracts, futures, options, swaps)
-- insurance
+- insurance (buy and sell)
 - currency (fiat and digital)
 - composed product (a set of any of the above)
 - funds (you need to buy any of the above and get when you sell it)
