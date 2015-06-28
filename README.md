@@ -64,7 +64,7 @@ So the complete system will be:
 - Driver functions operating the APIs stored in GitHub. For security reasons, these functions will be under public scrutiny and restricted write access.
 - User credentials. Are local to each user. The package will support encrypting them with a keychain password that should never be stored in the same computer and treat them as sensitive material with an as-short-as-possible lifetime and never stored as plaintext.
 
-As you may have noticed, this a very ambitious goal. A task that requires collaboration! So this is an opportunity to share everything I know about financial services with other people who know even more and put everything together for the following rewards:
+As you may have noticed, this is a very ambitious goal. A task that requires collaboration! So this is an opportunity to share everything I know about financial services with other people who know even more and put everything together for the following rewards:
 
 1. The package itself. Allowing to invest and create fintech business
 2. The package itself. Allowing others to correctly and efficiently use our fintech business
