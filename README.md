@@ -1,7 +1,9 @@
 # finSockets
+
 R package for querying and trading all kinds of financial products over the APIS of webservices using a shared repository of API interfaces
 
 ## Introduction
+
 The idea behind this initiative is sharing the know-how to operate financial APIs in a machine understandable way. Places like [programmableweb]( http://www.programmableweb.com/category/financial/apis?category=19968
 ) do a great job collecting information intended for programmers, but this tool is intended for analysts and investors. The intention is creating an abstraction of all services and products.
 The following is valid code:
@@ -62,6 +64,7 @@ As you may have noticed, this a very ambitious goal. A task that requires collab
 3. Donations and license sales distributed in full among contributors on a pure meritocratic basis
 
 ## Product classes initially included
+
 In the first version of this package we intend to focus on products that represent value and can be traded over the internet. We do not contemplate purely transactional systems like payment platforms or remittance in this first version, but do contemplate to include them in the future. This means, you can buy or sell products on a platform using funds you have on that same platform or using bitcoin. The package includes all necessary to sign and verify bitcoin payments and provide or withdraw funds in bitcoin in services supporting that functionality, including BTC to fiat conversion.
 The products fall in one of these categories:
 - stock (equities and securities)
@@ -77,17 +80,32 @@ The products fall in one of these categories:
 
 ## Intended timeline
 
+There is only one chance to make a first impression, so we do not intend to do any promotion of this package until we have a version 0.1 that provides a nice user experience to any evaluator. The list of services may be short, 
+but it has to implement enough functionality to win its own case in terms of usefulness, documentation and consistency. I.e., move people into willing to use it and collaborate.
+
+We expect to have this 0.1 version by the end of September 2015. In the meantime, before the version reaches 0.1, we will commit to this repo and update service data to Google (download the package to see where), but the package 
+should not be considered complete work.
+
+When version 0.1 is released, we will submit it to Cran and R-forge and try to promote the package in related internet sites that find it worth mentioning.
+
 ## Other languages
+
 Especially Python are welcome. We develop everything using the widest possible conventions to make the repositories of services and products language independent. We will have snippets connecting to the services for other languages (at least Python), but need extra help to elevate that into viable packages.
 
 ## License and decisions
+
 GNU General Public License, version 2 [link](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
-Less restrictive forms of licensing may be provided upon request to reward contributors on a pure meritocratic basis.
+
+Less restrictive forms of licensing may be provided upon request to reward contributors on a purely meritocratic basis.
+
 Decisions on the development of this package will also be voted on a meritocratic basis.
 
 ## Contributors
+
 Are welcome!!
+
 In all possible areas, including (in no particular order):
+
 - Core software development
 - Migrating code to other languages (Python as the first candidate)
 - Creating interfaces for new services
