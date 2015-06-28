@@ -52,7 +52,7 @@ Also, the package will be updated like a normal R package (hopefully in Cran som
 So the complete system will be:
 - The package itself: finSockets
 - Data about products, services and APIs stored in [Google Public Data](https://developers.google.com/public-data/)
-- Driver functions operating the APIs stored in GitHub. For security reasons, these functions will be under public revision and restricted write access.
+- Driver functions operating the APIs stored in GitHub. For security reasons, these functions will be under public scrutiny and restricted write access.
 - User credentials. Are local to each user. The package will support encrypting them with a keychain password that should never be stored in the same computer and treat them as sensitive material with an as-short-as-possible lifetime and never stored as plaintext.
 
 As you may have noticed, this a very ambitious goal. A task that requires collaboration! So this is an opportunity to share everything I know about financial services with other people who know even more and put everything together for the following rewards:
@@ -72,6 +72,7 @@ The products fall in one of these categories:
 - currency (fiat and digital)
 - composed product (a set of any of the above)
 - funds (you need to buy any of the above and get when you sell it)
+
 (This list is a draft; see the source code for a full updated list.)
 
 ## Intended timeline
